@@ -3,10 +3,10 @@
     Description: Login
 */
 const { Router } = require('express');
-const { createUser, loginUser, renewToken } = require('../controllers/auth'); 3
+const { createUser, loginUser, renewToken } = require('../controllers/authController'); 
 const { check } = require('express-validator');
-const { fieldsValidator } = require('../middlewares/fields-validator');
-const { jwtValidateMiddleware } = require('../middlewares/jwt-validator');
+const { fieldsValidator } = require('../middlewares/fieldsValidatorMiddleware');
+const { jwtValidateMiddleware } = require('../middlewares/jwtValidatorMiddleware');
 const router = Router();
 
 router.post('/new',
